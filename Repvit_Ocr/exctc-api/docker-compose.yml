@@ -1,0 +1,8 @@
+services:
+  ocr:
+    build: .
+    ports: ["8000:8000"]
+    volumes:
+      - ./models:/models:ro          # put best_exctc_model.pt here (skips MLflow entirely)
+    env_file: [.env]                 # optional: DagsHub creds if you load from MLflow
+    restart: unless-stopped

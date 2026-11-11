@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+mlruns/
+outputs/
+*.pt
+.ipynb_checkpoints/
